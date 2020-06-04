@@ -998,6 +998,9 @@ pie
     </td>
 </tr>
 <!-- </Pie> -->
+</table>
+
+
 
 **在Hugo中使用Mermaid库的注意事项：**
 
@@ -1018,6 +1021,8 @@ graph TD;
 > 更多Mermaid语法，参考[官方文档](https://mermaid-js.github.io/mermaid/)。
 
 ---
+
+
 
 ### Emoji表情
 
