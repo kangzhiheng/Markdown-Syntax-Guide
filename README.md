@@ -111,9 +111,9 @@
 
 HTML方法
 
-<mark>\<b>加粗文本<b\></mark> &emsp; <b>加粗文本</b>
+`<b>加粗文本</b>` &emsp; <b>加粗文本</b>
 
-<mark>\<strong>加粗文本<strong\></mark> &emsp; <strong>加粗文本</strong>
+`<strong>加粗文本</strong>` &emsp; <strong>加粗文本</strong>
 
 Note：`__`由两个`_`组成。
 
@@ -123,21 +123,23 @@ Note：`__`由两个`_`组成。
 
 `**_强调并加粗_**` &emsp; **_强调并加粗_**
 
-#### 删除
+#### 删除线
 
 `~~删除文本~~ `&emsp; ~~删除文本~~
 
 #### 标记/高亮
 
-`==标记文本==` &emsp;   ==标记文本==
+`==标记文本==` 
 
-Note：该Hugo主题不支持渲染该功能，但支持HTML高亮语法，如下：
+`<mark>标记文本</mark>` 
 
-`<mark>标记文本</mark>` &emsp; <mark>标记文本</mark>
+**Note**： Github貌似不支持渲染该功能；
 
 #### 下划线
 
-`<u>下划线</u>`&emsp; <u>下划线</u>
+`<u>下划线</u>`
+
+**Note**： Github貌似不支持渲染该功能；
 
 #### 引用
 
@@ -418,11 +420,21 @@ print(tf.__version__)
 
 Markdown本身没有居中的语法，需要HTML元素支持。
 
-**格式**：<mark>\<center>  人间有味是清欢  </center\></mark>
+**格式1**：`<center>  人间有味是清欢  </center>`
 
-**输出**：
+该格式Github不支持。
 
-<center> 人间有味是清欢 </center>
+**格式2：** `<p align="center"> 入淮清洛渐漫漫 </p>`
+
+**输出：**
+
+<p align="center"> 入淮清洛渐漫漫 </p>
+
+**格式3：** `<div align=center> 一蓑烟雨任平生 </div>`
+
+**输出：**
+
+<div align=center> 一蓑烟雨任平生 </div>
 
 #### 换行
 
@@ -430,7 +442,7 @@ Markdown本身没有居中的语法，需要HTML元素支持。
 
 1. 在段末连续**两次**按下<kbd>Enter</kbd>，即两个段落之间空一行；
 
-2. 在上一段的末尾加上HTML标签<mark><br\></mark>即可换行；
+2. 在上一段的末尾加上HTML标签`<br>`即可换行；
 
 **注意**：在Typora中，直接在段末按下<kbd>Enter</kbd>即可换行；
 
@@ -451,21 +463,7 @@ Markdown本身没有居中的语法，需要HTML元素支持。
 
 输出：
 
-<font face="华文行楷">华文行楷</font>  
-
-<center><font face="华文行楷">华文行楷居中</font></center> 
-
-<font face="黑体">我是黑体字</font>
-
-<font face="宋体">我是宋体字</font>
-
-<font face="微软雅黑">我是微软雅黑字</font>
-
-<font face="fantasy">我是fantasy字</font>
-
-<font face="Helvetica">我是Helvetica字</font>
-
-<font face="STCAIYUN">我是华文彩云</font>
+![](https://gitee.com/kangzhiheng/ImageHosting/raw/master/Img/13-markdown-font.png)
 
 #### 字号
 
@@ -906,100 +904,148 @@ $$
 
 ### Mermaid库
 
-&emsp;&emsp;[Mermaid](https://mermaid-js.github.io/mermaid) 是一个用于画流程图、状态图、时序图、甘特图的库，使用 JS 进行本地渲染，广泛集成于许多 Markdown 编辑器中。
+&emsp;&emsp;[Mermaid](https://mermaid-js.github.io/mermaid) 是一个用于画流程图、状态图、时序图、甘特图的库，使用 JS 进行本地渲染，广泛集成于许多 Markdown 编辑器中，可以尝试[在线Mermaid编辑器](https://mermaid-js.github.io/mermaid-live-editor/)（<font color="red" > 推荐 </font>）。
 
-#### 甘特图Gantt
-
+<table>
+<!-- <Flowchart> -->
+<tr><td colspan=2 align="center">
+    <b>Flow</b></br>
+    [<a href="http://mermaid-js.github.io/mermaid/#/flowchart">docs</a> - <a href="https://mermaidjs.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcbiAgICBBW0hhcmRdIC0tPnxUZXh0fCBCKFJvdW5kKVxuICAgIEIgLS0-IEN7RGVjaXNpb259XG4gICAgQyAtLT58T25lfCBEW1Jlc3VsdCAxXVxuICAgIEMgLS0-fFR3b3wgRVtSZXN1bHQgMl0iLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9fQ">live editor</a>]
+</td></tr>
+<tr>
+    <td><pre>
+```mermaid
+graph TD
+A[Hard] -->|Text| B(Round)
+B --> C{Decision}
+C -->|One| D[Result 1]
+C -->|Two| E[Result 2]
 ```
-​```mermaid
-gantt
-        dateFormat  YYYY-MM-DD
-        title Adding GANTT diagram functionality to mermaid
-        section 现有任务
-        已完成               :done,    des1, 2014-01-06,2014-01-08
-        进行中               :active,  des2, 2014-01-09, 3d
-        计划一               :         des3, after des2, 5d
-        计划二               :         des4, after des3, 5d
-​```
+    </pre></td>
+    <td align="center">
+        <img src="https://raw.githubusercontent.com/mermaid-js/mermaid/master/img/gray-flow.png" />
+    </td>
+</tr>
+<!-- </Flowchart> -->
+<!-- <Sequence> -->
+<tr><td colspan=2 align="center">
+    <b>Sequence</b><br />
+    [<a href="http://mermaid-js.github.io/mermaid/#/sequenceDiagram">docs</a> - <a href="https://mermaidjs.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG5BbGljZS0-PkpvaG46IEhlbGxvIEpvaG4sIGhvdyBhcmUgeW91P1xubG9vcCBIZWFsdGhjaGVja1xuICAgIEpvaG4tPj5Kb2huOiBGaWdodCBhZ2FpbnN0IGh5cG9jaG9uZHJpYVxuZW5kXG5Ob3RlIHJpZ2h0IG9mIEpvaG46IFJhdGlvbmFsIHRob3VnaHRzIVxuSm9obi0tPj5BbGljZTogR3JlYXQhXG5Kb2huLT4-Qm9iOiBIb3cgYWJvdXQgeW91P1xuQm9iLS0-PkpvaG46IEpvbGx5IGdvb2QhIiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifX0">live editor</a>]
+</td></tr>
+<tr>
+    <td><pre>
+```mermaid
+sequenceDiagram
+Alice->>John: Hello John, how are you?
+loop Healthcheck
+    John->>John: Fight against hypochondria
+end
+Note right of John: Rational thoughts!
+John-->>Alice: Great!
+John->>Bob: How about you?
+Bob-->>John: Jolly good!
 ```
-
-显示
-
+    </pre></td>
+    <td align="center">
+        <img src="https://raw.githubusercontent.com/mermaid-js/mermaid/master/img/gray-sequence.png" />
+    </td>
+</tr>
+<!-- </Sequence> -->
+<!-- <Gantt> -->
+<tr><td colspan=2 align="center">
+    <b>Gantt</b><br />
+    [<a href="http://mermaid-js.github.io/mermaid/#/gantt">docs</a> - <a href="https://mermaidjs.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ2FudHRcbnNlY3Rpb24gU2VjdGlvblxuQ29tcGxldGVkIDpkb25lLCAgICBkZXMxLCAyMDE0LTAxLTA2LDIwMTQtMDEtMDhcbkFjdGl2ZSAgICAgICAgOmFjdGl2ZSwgIGRlczIsIDIwMTQtMDEtMDcsIDNkXG5QYXJhbGxlbCAxICAgOiAgICAgICAgIGRlczMsIGFmdGVyIGRlczEsIDFkXG5QYXJhbGxlbCAyICAgOiAgICAgICAgIGRlczQsIGFmdGVyIGRlczEsIDFkXG5QYXJhbGxlbCAzICAgOiAgICAgICAgIGRlczUsIGFmdGVyIGRlczMsIDFkXG5QYXJhbGxlbCA0ICAgOiAgICAgICAgIGRlczYsIGFmdGVyIGRlczQsIDFkIiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifX0">live editor</a>]
+</td></tr>
+<tr>
+    <td><pre>
 ```mermaid
 gantt
-        dateFormat  YYYY-MM-DD
-        title Adding GANTT diagram functionality to mermaid
-        section 现有任务
-        已完成               :done,    des1, 2014-01-06,2014-01-08
-        进行中               :active,  des2, 2014-01-09, 3d
-        计划一               :         des3, after des2, 5d
-        计划二               :         des4, after des3, 5d
+section Section
+Completed :done,    des1, 2014-01-06,2014-01-08
+Active        :active,  des2, 2014-01-07, 3d
+Parallel 1   :         des3, after des1, 1d
+Parallel 2   :         des4, after des1, 1d
+Parallel 3   :         des5, after des3, 1d
+Parallel 4   :         des6, after des4, 1d
 ```
-
-{{<mermaid>}}
-
-gantt
-        dateFormat  YYYY-MM-DD
-        title Adding GANTT diagram functionality to mermaid
-        section 现有任务
-        已完成               :done,    des1, 2014-01-06,2014-01-08
-        进行中               :active,  des2, 2014-01-09, 3d
-        计划一               :         des3, after des2, 5d
-        计划二               :         des4, after des3, 5d
-
-{{</mermaid>}}
-
-#### 时序图SequenceDiagram
-
+    </pre></td>
+    <td align="center">
+        <img src="https://raw.githubusercontent.com/mermaid-js/mermaid/master/img/gray-gantt.png" />
+    </td>
+</tr>
+<!-- </Gantt> -->
+<!-- <Class> -->
+<tr><td colspan=2 align="center">
+    <b>Class</b><br />
+    [<a href="http://mermaid-js.github.io/mermaid/#/classDiagram">docs</a> - <a href="https://mermaidjs.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiY2xhc3NEaWFncmFtXG5DbGFzczAxIDx8LS0gQXZlcnlMb25nQ2xhc3MgOiBDb29sXG48PGludGVyZmFjZT4-IENsYXNzMDFcbkNsYXNzMDkgLS0-IEMyIDogV2hlcmUgYW0gaT9cbkNsYXNzMDkgLS0qIEMzXG5DbGFzczA5IC0tfD4gQ2xhc3MwN1xuQ2xhc3MwNyA6IGVxdWFscygpXG5DbGFzczA3IDogT2JqZWN0W10gZWxlbWVudERhdGFcbkNsYXNzMDEgOiBzaXplKClcbkNsYXNzMDEgOiBpbnQgY2hpbXBcbkNsYXNzMDEgOiBpbnQgZ29yaWxsYVxuY2xhc3MgQ2xhc3MxMCB7XG4gID4-c2VydmljZT4-XG4gIGludCBpZFxuICBzaXplKClcbn0iLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9fQ">live editor</a>]
+</td></tr>
+<tr>
+    <td><pre>
+```mermaid
+classDiagram
+Class01 &lt;|-- AveryLongClass : Cool
+&lt;&lt;interface>> Class01
+Class09 --> C2 : Where am i?
+Class09 --* C3
+Class09 --|> Class07
+Class07 : equals()
+Class07 : Object[] elementData
+Class01 : size()
+Class01 : int chimp
+Class01 : int gorilla
+class Class10 {
+  &lt;&lt;service>>
+  int id
+  size()
+}
 ```
-​```mermaid
-sequenceDiagram
-张三 ->> 李四: 你好！李四, 最近怎么样?
-李四-->>王五: 你最近怎么样，王五？
-李四--x 张三: 我很好，谢谢!
-李四-x 王五: 我很好，谢谢!
-Note right of 王五: 李四想了很长时间, 文字太长了<br/>不适合放在一行.
-
-李四-->>张三: 打量着王五...
-张三->>王五: 很好... 王五, 你怎么样?
-​```
+</pre></td>
+    <td align="center">
+        <img src="https://raw.githubusercontent.com/mermaid-js/mermaid/master/img/gray-class.png" />
+    </td>
+</tr>
+<!-- </Class> -->
+<!-- <State> -->
+<tr><td colspan=2 align="center">
+    <b>State</b><br />
+    [<a href="http://mermaid-js.github.io/mermaid/#/stateDiagram">docs</a> - <a href="https://mermaidjs.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoic3RhdGVEaWFncmFtXG4gICAgWypdIC0tPiBTdGlsbFxuICAgIFN0aWxsIC0tPiBbKl1cbiAgICBTdGlsbCAtLT4gTW92aW5nXG4gICAgTW92aW5nIC0tPiBTdGlsbFxuICAgIE1vdmluZyAtLT4gQ3Jhc2hcbiAgICBDcmFzaCAtLT4gWypdIiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifX0">live editor</a>]
+</td></tr>
+<tr>
+    <td><pre>
+```mermaid
+stateDiagram
+[*] --> Still
+Still --> [*]
+Still --> Moving
+Moving --> Still
+Moving --> Crash
+Crash --> [*]
 ```
-
-显示：
-
-{{<mermaid>}}
-sequenceDiagram
-张三 ->> 李四: 你好！李四, 最近怎么样?
-李四-->>王五: 你最近怎么样，王五？
-李四--x 张三: 我很好，谢谢!
-李四-x 王五: 我很好，谢谢!
-Note right of 王五: 李四想了很长时间, 文字太长了<br/>不适合放在一行.
-
-李四-->>张三: 打量着王五...
-张三->>王五: 很好... 王五, 你怎么样?
-{{</mermaid>}}
-
-#### 流程图Flowchat
-
+</pre></td>
+    <td align="center">
+        <img src="https://raw.githubusercontent.com/mermaid-js/mermaid/master/img/gray-state.png" />
+    </td>
+</tr>
+<!-- </State> -->
+<!-- <Pie> -->
+<tr><td colspan=2 align="center">
+    <b>Pie</b><br />
+    [<a href="http://mermaid-js.github.io/mermaid/#/pie">docs</a> - <a href="https://mermaidjs.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoicGllXG5cIkRvZ3NcIiA6IDQyLjk2XG5cIkNhdHNcIiA6IDUwLjA1XG5cIlJhdHNcIiA6IDEwLjAxIiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifX0">live editor</a>]
+</td></tr>
+<tr>
+    <td><pre>
+```mermaid
+pie
+"Dogs" : 386
+"Cats" : 85
+"Rats" : 15
 ```
-​```mermaid
-graph LR
-A[长方形] -- 链接 --> B((圆))
-A --> C(圆角长方形)
-B --> D{菱形}
-C --> D
-​```
-```
-
-显示：
-
-{{<mermaid>}}
-graph LR
-A[长方形] -- 链接 --> B((圆))
-A --> C(圆角长方形)
-B --> D{菱形}
-C --> D
-{{</mermaid>}}
+</pre></td>
+    <td align="center">
+        <img src="https://gitee.com/kangzhiheng/ImageHosting/raw/master/Img/markdown-mermaid-pie.png" />
+    </td>
+</tr>
+<!-- </Pie> -->
 
 **在Hugo中使用Mermaid库的注意事项：**
 
@@ -1016,17 +1062,6 @@ graph TD;
     B-->D;
     C-->D;
 ```
-
-
-显示：
-
-{{<mermaid>}}
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-{{</mermaid>}}
 
 > 更多Mermaid语法，参考[官方文档](https://mermaid-js.github.io/mermaid/)。
 
@@ -1162,3 +1197,4 @@ graph TD;
 ---
 
 ### 参考
+
