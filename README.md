@@ -17,9 +17,7 @@
 >
 > &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;—— John Gruber
 
-&emsp;&emsp;**Markdown**是一种[轻量级标记语言](https://zh.wikipedia.org/wiki/轻量级标记语言)，创始人为[约翰·格鲁伯](https://zh.wikipedia.org/wiki/約翰·格魯伯)（英语：John Gruber）。它允许人们使用易读易写的纯文本格式编写文档，然后转换成有效的[XHTML](https://zh.wikipedia.org/wiki/XHTML)（或者[HTML](https://zh.wikipedia.org/wiki/HTML)）文档，因此有些HTML语法也可以直接在Markdown中应用[^7]。
-
-[^7]: https://zh.wikipedia.org/wiki/Markdown
+&emsp;&emsp;**Markdown**是一种[轻量级标记语言](https://zh.wikipedia.org/wiki/轻量级标记语言)，创始人为[约翰·格鲁伯](https://zh.wikipedia.org/wiki/約翰·格魯伯)（英语：John Gruber）。它允许人们使用易读易写的纯文本格式编写文档，然后转换成有效的[XHTML](https://zh.wikipedia.org/wiki/XHTML)（或者[HTML](https://zh.wikipedia.org/wiki/HTML)）文档，因此有些HTML语法也可以直接在Markdown中应用。
 
 &emsp;&emsp;由于**Markdown**的轻量化、易读易写特性，并且对于图片，图表、数学式都有支持，目前许多网站都广泛使用Markdown来撰写帮助文档或是用于[论坛](https://zh.wikipedia.org/wiki/网络论坛)上发表消息。如[GitHub](https://zh.wikipedia.org/wiki/GitHub)、[Reddit](https://zh.wikipedia.org/wiki/Reddit)、[Diaspora](https://zh.wikipedia.org/wiki/Diaspora)、[Stack Exchange](https://zh.wikipedia.org/wiki/Stack_Exchange)、[OpenStreetMap](https://zh.wikipedia.org/wiki/OpenStreetMap) 、[SourceForge](https://zh.wikipedia.org/wiki/SourceForge)、[Gitbook](https://gitbook.com)、[GitLab](https://gitlab.com)、[Gitee](https://gitee.com)、[简书](https://zh.wikipedia.org/wiki/简书)、[掘金](https://juejin.im)、[CSDN](https://blog.csdn.net/)等，甚至还能被使用来撰写[电子书](https://zh.wikipedia.org/wiki/電子書)。
 
@@ -27,21 +25,20 @@
 
 &emsp;&emsp;**Markdown**增强版中比较有名的有Markdown Extra、MultiMarkdown、 Maruku等。这些衍生版本要么基于工具，如Pandoc；要么基于网站，如GitHub和Wikipedia，在语法上基本兼容，但在一些语法和渲染效果上有改动。
 
-&emsp;&emsp;总结一下Markdown的特点[^8]：
+&emsp;&emsp;总结一下Markdown的[特点](https://sspai.com/post/37263)：
 
-- Markdown是一种**轻量级**的标记语言。
+- Markdown是一种**轻量级**的标记语言；
 
-- Markdown的特点是**易读易写**。
+- Markdown的特点是**易读易写**；
 
-- Markdown的**内容与形式相分离**。
+- Markdown的**内容与形式相分离**；
 
-- Markdown文档书写方式是**源码**书写，基本纯键盘输入。
+- Markdown文档书写方式是**源码**书写，基本纯键盘输入；
 
-- Markdown文档是纯文本文档，意味着图片独立于文档之外。
+- Markdown文档是纯文本文档，意味着图片独立于文档之外；
 
-- Markdown是**书写语言**，不是发布语言，发布需要转换成Html。
+- Markdown是**书写语言**，不是发布语言，发布需要转换成Html；
 
-  [^8]: https://sspai.com/post/37263 
 
 <table><tr><td bgcolor=#54FF9F> 以下内容为<font color="red">Markdown</font>的<font color="blue" size = 5 face="华文楷体"> 基本语法</font>，结合各种<b>官方文档</b>和本人的<font color="#9B30F"><b>使用经验</b></font>使用经验而成。 </td></tr></table>
 
@@ -422,7 +419,7 @@ Markdown本身没有居中的语法，需要HTML元素支持。
 
 **格式1**：`<center>  人间有味是清欢  </center>`
 
-该格式Github不支持。
+**Note**： Github不支持渲染该功能；具体效果请参阅我的博客文章[《Markdown Syntax Guide》](https://kangzhiheng.top/post/13-markdown-syntax-guide/#%E6%AE%B5%E8%90%BD)。
 
 **格式2：** `<p align="center"> 入淮清洛渐漫漫 </p>`
 
@@ -461,9 +458,7 @@ Markdown本身没有居中的语法，需要HTML元素支持。
 <font face="STCAIYUN">我是华文彩云</font>	
 ```
 
-输出：
-
-![](https://gitee.com/kangzhiheng/ImageHosting/raw/master/Img/13-markdown-font.png)
+**Note**： Github不支持渲染该功能；具体效果请参阅我的博客文章[《Markdown Syntax Guide》](https://kangzhiheng.top/post/13-markdown-syntax-guide/#%E6%AE%B5%E8%90%BD)。
 
 #### 字号
 
@@ -478,16 +473,6 @@ Markdown本身没有居中的语法，需要HTML元素支持。
 <font Size=6>我是6号字</font>  
 <font Size=7>我是7号字</font>
 ```
-
-输出：
-
-<font Size=1>我是1号字</font>  
-<font Size=2>我是2号字</font>  
-<font Size=3>我是3号字</font>  
-<font Size=4>我是4号字</font>  
-<font Size=5>我是5号字</font>  
-<font Size=6>我是6号字</font>  
-<font Size=7>我是7号字</font> 
 
 **注意**：**这里的字号与word里的不同，浏览器一般默认字号为<font color=red>3号</font>。**
 
@@ -516,20 +501,9 @@ Markdown本身没有居中的语法，需要HTML元素支持。
 
 输出：
 
-<font color="red"> 我是红色字体，color=red </font>  
-<font color="yellow"> 我是黄色字体，color=yellow </font>   
-<font color="blue"> 我是蓝色字体，color=blue </font>  
-<font color="green"> 我是绿色字体，color=green </font>  
-<font color="gray"> 我是灰色字体，color=gray </font>  
-<font color="orange"> 我是橙色字体，color=orange </font>  
-<font color="brown"> 我是棕色字体，color=brown </font> 
+![](https://gitee.com/kangzhiheng/ImageHosting/raw/master/Img/13-markdown-color.png)
 
-<font color="#FF8C69"> 字体颜色，color=#FF8C69 </font>  
-<font color="#EE82EE"> 字体颜色，color=#EE82EE </font>  
-<font color="#C1FFC1"> 字体颜色，color=#C1FFC1 </font>  
-<font color="#9B30FF"> 字体颜色，color=#9B30FF </font>  
-<font color="#CD00CD"> 字体颜色，color=#CD00CD </font>  
-<font color="#00B2EE"> 字体颜色，color=#00B2EE </font>  
+**Note**： Github不支持渲染该功能；具体效果请参阅我的博客文章[《Markdown Syntax Guide》](https://kangzhiheng.top/post/13-markdown-syntax-guide/#%E6%AE%B5%E8%90%BD)。
 
 #### 同时改变字体、字号和颜色
 
@@ -539,9 +513,7 @@ Markdown本身没有居中的语法，需要HTML元素支持。
 
 `<font face="华文行楷" size=5 color=#CD00CD > 大小为5号，颜色为#CD00CD的华文行楷。 </font> `
 
-输出：
-
-<font face="华文行楷" size=5 color=#CD00CD >大小为5号，颜色为#CD00CD的华文行楷。</font>
+**Note**： Github不支持渲染该功能；具体效果请参阅我的博客文章[《Markdown Syntax Guide》](https://kangzhiheng.top/post/13-markdown-syntax-guide/#%E6%AE%B5%E8%90%BD)。
 
 #### 背景色
 
@@ -559,11 +531,9 @@ Markdown本身没有居中的语法，需要HTML元素支持。
 
 输出：
 
-<table><tr><td bgcolor=#FF69B4>背景色由十六进制颜色值设置而成：#FF69B4</td></tr></table>
-<table><tr><td bgcolor=#FF83FA>背景色由十六进制颜色值设置而成：#FF83FA</td></tr></table>
-<table><tr><td bgcolor=#40E0D0>背景色由十六进制颜色值设置而成：#40E0D0</td></tr></table>
-<table><tr><td bgcolor=#C0FF3E>背景色由十六进制颜色值设置而成：#C0FF3E</td></tr></table>
-<table><tr><td bgcolor=#54FF9F>背景色由十六进制颜色值设置而成：#54FF9F</td></tr></table>
+![](https://gitee.com/kangzhiheng/ImageHosting/raw/master/Img/13-markdown-bgcolor.png)
+
+**Note**： Github不支持渲染该功能；具体效果请参阅我的博客文章[《Markdown Syntax Guide》](https://kangzhiheng.top/post/13-markdown-syntax-guide/#%E6%AE%B5%E8%90%BD)。
 
 #### 分割线/水平线
 
@@ -604,11 +574,11 @@ Markdown本身没有居中的语法，需要HTML元素支持。
   
     
   
-  - <mark>:</mark>是**英文**下的冒号，且旁边的<mark>-</mark>的个数不限制；
+  - `:`是**英文**下的冒号，且旁边的`-`的个数不限制；
   
     
   
-  - **标题的对齐方式**，与编辑器有关，有些编辑器里的标题对齐方式与内容一致，而有一些编辑器相反，这时如果想要使标题居中对齐，则需要HTML标签<mark>\<center></center\></mark>。
+  - **标题的对齐方式**，与编辑器有关，有些编辑器里的标题对齐方式与内容一致，而有一些编辑器相反，这时如果想要使标题居中对齐，则需要HTML标签`<center></center>`。
   
 - 下面几行，是表格的内容，也依次用<kbd>|</kbd>间隔，表格的内容与表头一一对应；
 
@@ -747,26 +717,14 @@ Markdown的脚注功能有两种实现方法。
 [^1]: 这里是脚注
 ```
 
-**显示：**
-
-脚注[^1]
-
-[^1]:这里是脚注
-
 #### 方法二
 
-如果希望被注释的文本是*斜体*，则追加<mark>\<cite></cite\></mark>即可，如下：
+如果希望被注释的文本是*斜体*，则追加`<cite></cite>`即可，如下：
 
 ```bash
 <cite>脚注[^1]</cite>
 [^1]: 这里是脚注
 ```
-
-**显示：**
-
-<cite>脚注[^2]</cite>
-
-[^2]: 这里是脚注
 
 **脚注的部分会在文章的末尾进行显示，并且支持跳转到指定位置。**
 
@@ -776,9 +734,7 @@ Markdown的脚注功能有两种实现方法。
 
 &emsp;&emsp;有这么一种情况：浏览一个很长的文章时，可能只对其中几个章节感兴趣时，需要直接跳转到该章节，这时就需要**锚点**。
 
-&emsp;&emsp;**锚点**是是网页制作中超级链接的一种，又叫**命名锚记**。使用命名锚记可以在文档中设置标记，这些标记通常放在文档的特定主题处或顶部。然后可以创建到这些命名锚记的链接，这些链接可快速将访问者带到指定位置[^3]。
-
-[^3]: <https://baike.baidu.com/item/锚点>
+&emsp;&emsp;**锚点**是是网页制作中超级链接的一种，又叫**命名锚记**。使用命名锚记可以在文档中设置标记，这些标记通常放在文档的特定主题处或顶部。然后可以创建到这些命名锚记的链接，这些链接可快速将访问者带到指定位置。
 
 &emsp;&emsp;**锚点跳转**要注意首先要注意以下两点：
 
@@ -832,9 +788,7 @@ Markdown的脚注功能有两种实现方法。
 
 ### MathJax公式
 
-&emsp;&emsp;[MathJax](https://www.mathjax.org/)和[Katex](https://katex.org/)是两种支持HTML的轻量级的数学公式引擎，但`MathJax`对**行内公式**支持较好。它们的低层都是TEX，所以$\LaTeX$的语法，都可以在<kbd>$</kbd>和<kbd>$</kbd><kbd>$</kbd>中被渲染。在hugo中配置MathJax请参阅文章[^4]
-
-[^4]: [Markdown 博客中使用 MathJax 数学公式](https://xuchengpeng.com/hugo-blog/2018/05/25/mathjax-in-markdown-blog/)
+&emsp;&emsp;[MathJax](https://www.mathjax.org/)和[Katex](https://katex.org/)是两种支持HTML的轻量级的数学公式引擎，但`MathJax`对**行内公式**支持较好。它们的低层都是TEX，所以$\LaTeX$的语法，都可以在<kbd>$</kbd>和<kbd>$</kbd><kbd>$</kbd>中被渲染。在hugo中配置MathJax请参阅[文章](https://xuchengpeng.com/hugo-blog/2018/05/25/mathjax-in-markdown-blog/)。
 
 #### 行内公式
 
@@ -896,9 +850,7 @@ $$
    \end{aligned}
    $$
    ```
-&emsp;&emsp;$\LaTeX$中的特殊符号[^5]，请参阅[链接](http://estudijas.lu.lv/pluginfile.php/14809/mod_page/content/16/instrukcijas/matematika_moodle/LaTeX_Symbols.pdf)。
-
-[^5]: [Latex/MathJax/Katex数学公式手册](https://drivingc.com/p/5b1bd56d2392ec23b91bab2e)
+&emsp;&emsp;$\LaTeX$中的[特殊符号](https://drivingc.com/p/5b1bd56d2392ec23b91bab2e)，请参阅[链接](http://estudijas.lu.lv/pluginfile.php/14809/mod_page/content/16/instrukcijas/matematika_moodle/LaTeX_Symbols.pdf)。
 
 ---
 
@@ -1081,7 +1033,7 @@ graph TD;
 | **Places** | <mark>\:mailbox​\:</mark> |            :cn:            | <mark>\:airplane​\:</mark> | :airplane: | <mark>\:tent​\:</mark> | :tent: |
 | **Symbols** | <mark>\:ideograph_advantage​\:</mark> |   :ideograph_advantage:    | <mark>\:white_check_mark​\:</mark> |     :white_check_mark:     | <mark>\:o​\:</mark> | :o: |
 
->  更多Emoji表情，参考[官方文档](https://www.webfx.com/tools/emoji-cheat-sheet/)。
+>  更多Emoji表情，参考[官方文档](https://www.webfx.com/tools/emoji-cheat-sheet/)和[Github官方文档](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md)。
 
 ---
 
@@ -1197,4 +1149,10 @@ graph TD;
 ---
 
 ### 参考
+
+1. <https://www.toptal.com/designers/htmlarrows/symbols/>；
+2. https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md；
+
+3. https://www.webfx.com/tools/emoji-cheat-sheet/；
+4. https://xuchengpeng.com/hugo-blog/2018/05/25/mathjax-in-markdown-blog/
 
