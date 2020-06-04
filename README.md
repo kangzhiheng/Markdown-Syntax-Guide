@@ -999,14 +999,11 @@ pie
 </tr>
 <!-- </Pie> -->
 </table>
-
-
+注：以上Mermaid资源来自Mermaid的[官方指导文件](https://github.com/mermaid-js/mermaid)。
 
 **在Hugo中使用Mermaid库的注意事项：**
 
-&emsp;&emsp;在hugo中，Markdown编译器是[Blackfriday](https://github.com/russross/blackfriday)，并不直接支持**Mermaid**库，需要进行一定的配置，具体请参阅这篇[文章](https://kentxxq.com/contents/%E6%8B%93%E5%B1%95hugo%E7%9A%84markdown_%E6%B5%81%E7%A8%8B%E5%9B%BEmermaid/)[^6]。
-
-[^6]: Mermaid: <https://kentxxq.com/contents/拓展hugo的markdown_流程图mermaid/>
+&emsp;&emsp;在hugo中，Markdown编译器是[Blackfriday](https://github.com/russross/blackfriday)，并不直接支持**Mermaid**库，需要进行一定的配置，具体请参阅这篇[文章](https://kentxxq.com/contents/%E6%8B%93%E5%B1%95hugo%E7%9A%84markdown_%E6%B5%81%E7%A8%8B%E5%9B%BEmermaid/)。
 
 &emsp;&emsp;配置完成后，在使用时，利用`{{ <mermaid> }}`和`{{ </mermaid> }}`框住mermaid代码，例如用`{{ <mermaid> }}`和`{{ </mermaid> }}`框住以下代码即可：
 
